@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic E-Commerce Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="logo">FakeStore</div>
+        <div class="cart-container">
+            <button id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div id="error-banner" class="error-banner hidden"></div>
+
+        <section class="controls">
+            <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+            
+            <div id="category-tabs" class="category-tabs" aria-label="Product categories">
+                <button class="tab-btn active" data-category="all">All</button>
+                <!-- Dynamic categories injected here -->
+            </div>
+
+            <select id="sort-select" aria-label="Sort products">
+                <option value="default">Sort by</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+            </select>
+        </section>
+
+        <section id="product-grid" class="product-grid">
+            <!-- Loading Skeletons / Products injected here -->
+        </section>
+    </main>
+
+    <!-- ES6 Modules Entry -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
