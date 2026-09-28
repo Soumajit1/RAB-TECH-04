@@ -17,3 +17,22 @@ This repository implements a modular, vanilla ES6+ application that fetches real
 Since this uses ES6 modules (`<script type="module">`), you must serve it over a local web server (e.g., `python -m http.server`, VS Code Live Server) to bypass CORS/file-system protocol restrictions. Opening `index.html` directly via the `file://` protocol will result in a CORS module error.
 https://www.youtube.com/watch?v=7Wi38uVsW98
 https://www.youtube.com/watch?v=7Wi38uVsW98https://www.youtube.com/watch?v=7Wi38uVsW98https://www.youtube.com/watch?v=7Wi38uVsW98https://www.youtube.com/watch?v=7Wi38uVsW98
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if (p == q) return true;
+        if (!p || !q || p->val != q->val) return false;
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+    }
+};
