@@ -15,3 +15,4 @@ This repository implements a modular, vanilla ES6+ application that fetches real
 
 ## Usage
 Since this uses ES6 modules (`<script type="module">`), you must serve it over a local web server (e.g., `python -m http.server`, VS Code Live Server) to bypass CORS/file-system protocol restrictions. Opening `index.html` directly via the `file://` protocol will result in a CORS module error.
+https://www.youtube.com/watch?v=7Wi38uVsW98
